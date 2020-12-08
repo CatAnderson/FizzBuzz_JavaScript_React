@@ -9,15 +9,19 @@ const FizzBuzz = () => {
     };
 
     const minusNumber = () => {
-        setNumber(number - 1);
+        if(number > 0){
+            setNumber(number - 1);
+        } else{
+            return 0
+        }
     };
 
     return(
         <>
             <h1>FizzBuzz</h1>
             <h2>{ number }</h2>
-            <button>+1</button>
-            <button>-1</button>
+            <button onClick={() => addNumber()}>+1</button>
+            <button onClick={() => minusNumber()}>-1</button>
         </>
     )
 };
