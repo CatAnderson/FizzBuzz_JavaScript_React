@@ -22,18 +22,18 @@ const FizzBuzz = () => {
             setResult("FizzBuzz")
         } else if (number % 5 == 0){
             setResult("Buzz")
-            } else if(number % 3 == 0){
+        } else if(number % 3 == 0){
                 setResult("Fizz")
-            } else {
+        }else {
                 setResult(number)
-            }
-        }, [number])
+        }
+    }, [number]);
 
     return(
         <>
             <h1>FizzBuzz</h1>
             <h2>{ number }</h2>
-            <h3>{result}</h3>
+            <h3>{ result }</h3>
             <button onClick={() => addNumber()}>+1</button>
             <button onClick={() => minusNumber()}>-1</button>
         </>
